@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Achal Babu | Python Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">Achal Babu</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <img src="{{ url_for('static', filename='images/Achal Babu.jpg') }}" alt="Achal Babu" class="profile-pic">
+      <h2>Hello, I'm</h2>
+      <h1>Achal Babu</h1>
+      <p>Python Developer • Automation Expert • Web Scraping Specialist</p>
+      <a href="#contact" class="btn-glow">Let's Work Together</a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section">
+      <div class="about-container">
+    <div class="about-image">
+      <img src="{{ url_for('static', filename='images/Achal Babu.jpg') }}" alt="Achal Babu">
+    </div>
+    <div class="about-text">
+    <h2 class="section-title">About Me</h2>
+    <p>I help businesses turn problems into powerful Python solutions — from web scraping and automation to full-stack backend systems. With clean code, rapid delivery, and reliable support, I make sure every client gets more than they expected.</p>
+  </section>
+
+<!-- Services -->
+<section id="services" class="section dark-bg">
+  <h2 class="section-title">Services</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Web Scraping</h3>
+      <p>I extract data from websites using Python and deliver it in Excel, CSV, or APIs – fast, clean, and ready to use.</p>
+    </div>
+    <div class="card">
+      <h3>Flask APIs</h3>
+      <p>I build secure and scalable backend APIs in Flask for websites, mobile apps, or automation pipelines.</p>
+    </div>
+    <div class="card">
+      <h3>Excel Automation</h3>
+      <p>Automate your Excel reports, data cleaning, and analysis using Python – save hours every week.</p>
+    </div>
+    <div class="card">
+      <h3>Telegram Bots</h3>
+      <p>I create smart Telegram bots for alerts, auto-replies, data feeds, and custom workflows.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2 class="section-title">My Projects</h2>
+    <div class="card-grid">
+      <div class="card">Amazon Scraper</div>
+      <div class="card">Chat Bot System</div>
+      <div class="card">Flask Auth API</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact-section">
+    <h2 class="section-title">Contact Me</h2>
+    <form method="POST" action="/contact" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <p class="flash">{{ messages[0] }}</p>
+      {% endif %}
+    {% endwith %}
+  </section>
+
+  <footer>
+    <p>© 2025 Achal Babu. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
