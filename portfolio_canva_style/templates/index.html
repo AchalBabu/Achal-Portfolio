@@ -77,21 +77,30 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section contact-section">
-    <h2 class="section-title">Contact Me</h2>
-    <form method="POST" action="/contact" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        <p class="flash">{{ messages[0] }}</p>
-      {% endif %}
-    {% endwith %}
-  </section>
+<!-- Contact -->
+<section id="contact" class="section contact-section">
+  <h2 class="section-title">Contact Me</h2>
+  <form method="POST" action="/contact" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <p class="flash">{{ messages[0] }}</p>
+    {% endif %}
+  {% endwith %}
+
+  <div class="linkedin-button" style="text-align:center; margin-top: 20px;">
+    <a href="https://www.linkedin.com/in/achal-babu-a9b653359?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+       target="_blank" 
+       style="display: inline-block; padding: 10px 20px; background-color: #0a66c2; color: white; border-radius: 5px; text-decoration: none; font-weight: 600;">
+      Connect on LinkedIn
+    </a>
+  </div>
+</section>
+
 
   <footer>
     <p>© 2025 Achal Babu. All Rights Reserved.</p>
